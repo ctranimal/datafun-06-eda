@@ -16,4 +16,6 @@ GitHub, Git, Jupyter, pandas, Seaborn and other popular data analytics tools.
     5. 1. source .venv/bin/activate <!-- On Mac, this command would activate the environment -->
     6. At terminal, use the command "code ~/Repos/datafun-06-eda" to launch VS Code (previously installed on MAC) to open/edit/execute code related to this project.
     7. Within VS Code, open a Terminal windows, to run my written *.py code, issue the commands `python3 *.py`
-    8. 
+   
+## Data Sources.
+1. For this project, I've chosen Seaborn's carcrashes. There are lots of car-crashes. It intriques me and I would like to dig further into the data: which preventable crashes can be prevented. Further details can be found at: https://github.com/mwaskom/seaborn-data/blob/master/README.md and https://www.kaggle.com/datasets/fivethirtyeight/fivethirtyeight-bad-drivers-dataset 
