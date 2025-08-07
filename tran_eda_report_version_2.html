@@ -20,55 +20,20 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="tran_eda_report_files/libs/clipboard/clipboard.min.js"></script>
-<script src="tran_eda_report_files/libs/quarto-html/quarto.js" type="module"></script>
-<script src="tran_eda_report_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="tran_eda_report_files/libs/quarto-html/popper.min.js"></script>
-<script src="tran_eda_report_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="tran_eda_report_files/libs/quarto-html/anchor.min.js"></script>
-<link href="tran_eda_report_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="tran_eda_report_files/libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="tran_eda_report_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="tran_eda_report_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="tran_eda_report_files/libs/bootstrap/bootstrap-81267100e462c21b3d6c0d5bf76a3417.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="tran_eda_report_version_2_files/libs/clipboard/clipboard.min.js"></script>
+<script src="tran_eda_report_version_2_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="tran_eda_report_version_2_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="tran_eda_report_version_2_files/libs/quarto-html/popper.min.js"></script>
+<script src="tran_eda_report_version_2_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="tran_eda_report_version_2_files/libs/quarto-html/anchor.min.js"></script>
+<link href="tran_eda_report_version_2_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="tran_eda_report_version_2_files/libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="tran_eda_report_version_2_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="tran_eda_report_version_2_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="tran_eda_report_version_2_files/libs/bootstrap/bootstrap-81267100e462c21b3d6c0d5bf76a3417.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
@@ -111,23 +76,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="section-0.-setting-up-import-external-packages">Section 0. Setting-Up: Import external packages</h2>
 <section id="the-purpose-of-this-section-is-to-import-external-packages-that-i-will-need-to-execute-python-code-subsequently" class="level4">
 <h4 class="anchored" data-anchor-id="the-purpose-of-this-section-is-to-import-external-packages-that-i-will-need-to-execute-python-code-subsequently">The purpose of this section is to import external packages that I will need to execute python code subsequently</h4>
-<div id="9231ea24" class="cell" data-execution_count="24">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </section>
 </section>
 <section id="section-1.-step-1-data-acquisition" class="level2">
 <h2 class="anchored" data-anchor-id="section-1.-step-1-data-acquisition">Section 1. Step-1: Data Acquisition</h2>
 <section id="load-the-car_crashes-dataset-into-pandas-dataframe.-for-this-project-we-use-pre-made-data-called-car_crashes-so-that-we-can-go-ahead-and-practice-with-pandas-dataframe-as-opposed-to-loading-data-from-the-internet-via-reading-excel-or-csv-or-json-data-etc" class="level4">
 <h4 class="anchored" data-anchor-id="load-the-car_crashes-dataset-into-pandas-dataframe.-for-this-project-we-use-pre-made-data-called-car_crashes-so-that-we-can-go-ahead-and-practice-with-pandas-dataframe-as-opposed-to-loading-data-from-the-internet-via-reading-excel-or-csv-or-json-data-etc">1. Load the car_crashes dataset into pandas DataFrame. For this project, we use pre-made data called car_crashes so that we can go ahead and practice with pandas DataFrame (as opposed to loading data from the internet via reading excel or csv or JSON data etc …)</h4>
-<div id="373bdd52" class="cell" data-execution_count="25">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the dataset ino a pandas DataFrame</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> sns.load_dataset(<span class="st">"car_crashes"</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Inspect first rows of the DataFrame</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="373bdd52" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>   total  speeding  alcohol  not_distracted  no_previous  ins_premium  \
 0   18.8     7.332    5.640          18.048       15.040       784.55   
@@ -153,10 +108,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="section-2.-step-2-initial-data-inspection">Section 2. Step-2: Initial Data Inspection</h2>
 <section id="display-the-first-10-rows-of-the-dataframe-display-the-data-types-of-each-column-using-df.head10-df.shape-and-df.dtypes" class="level4">
 <h4 class="anchored" data-anchor-id="display-the-first-10-rows-of-the-dataframe-display-the-data-types-of-each-column-using-df.head10-df.shape-and-df.dtypes">Display the first 10 rows of the DataFrame, display the data types of each column using df.head(10), df.shape and df.dtypes</h4>
-<div id="88a5369a" class="cell" data-execution_count="26">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.head(<span class="dv">10</span>))</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.shape)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.dtypes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="88a5369a" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>   total  speeding  alcohol  not_distracted  no_previous  ins_premium  \
 0   18.8     7.332    5.640          18.048       15.040       784.55   
@@ -202,8 +154,7 @@ dtype: object</code></pre>
 <h2 class="anchored" data-anchor-id="section-3.-step-3-initial-descriptive-statistics">Section 3. Step-3: Initial Descriptive Statistics</h2>
 <section id="use-the-dataframe-describe-method-to-display-summary-statistics-for-each-column" class="level4">
 <h4 class="anchored" data-anchor-id="use-the-dataframe-describe-method-to-display-summary-statistics-for-each-column">Use the DataFrame describe() method to display summary statistics for each column</h4>
-<div id="af8090bd" class="cell" data-execution_count="27">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="af8090bd" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>           total   speeding    alcohol  not_distracted  no_previous  \
 count  51.000000  51.000000  51.000000       51.000000    51.000000   
@@ -240,53 +191,25 @@ max    1301.520000  194.780000  </code></pre>
 <h2 class="anchored" data-anchor-id="section-4.-step-4-initial-data-distribution-for-numerical-columns">Section 4. Step-4: Initial Data Distribution for Numerical Columns</h2>
 <section id="use-dfins_premium.hist-to-plot-a-histogram-for-ins_premium-column." class="level4">
 <h4 class="anchored" data-anchor-id="use-dfins_premium.hist-to-plot-a-histogram-for-ins_premium-column.">Use df[‘ins_premium’].hist() to plot a histogram for ‘ins_premium’ column.</h4>
-<div id="9c70c3f2" class="cell" data-execution_count="28">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'ins_premium'</span>].hist()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="9c70c3f2" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="tran_eda_report_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="tran_eda_report_version_2_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="observations-the-insuraance-premium-are-concentrated-around-800-amount-with-longer-tail-towards-1300." class="level4">
-<h4 class="anchored" data-anchor-id="observations-the-insuraance-premium-are-concentrated-around-800-amount-with-longer-tail-towards-1300.">Observations: The insuraance premium are concentrated around $800 amount, with longer “tail” towards $1,300.</h4>
-</section>
-<section id="below-show-all-the-histograms-for-all-numerical-columns-using-df.hist" class="level4">
-<h4 class="anchored" data-anchor-id="below-show-all-the-histograms-for-all-numerical-columns-using-df.hist">Below, show all the histograms for all numerical columns, using df.hist()</h4>
-<div id="f5b302e4" class="cell" data-execution_count="29">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df.hist()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="29">
-<pre><code>array([[&lt;Axes: title={'center': 'total'}&gt;,
-        &lt;Axes: title={'center': 'speeding'}&gt;,
-        &lt;Axes: title={'center': 'alcohol'}&gt;],
-       [&lt;Axes: title={'center': 'not_distracted'}&gt;,
-        &lt;Axes: title={'center': 'no_previous'}&gt;,
-        &lt;Axes: title={'center': 'ins_premium'}&gt;],
-       [&lt;Axes: title={'center': 'ins_losses'}&gt;, &lt;Axes: &gt;, &lt;Axes: &gt;]],
-      dtype=object)</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="tran_eda_report_files/figure-html/cell-7-output-2.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
+<section id="observations-the-insurance-premium-are-concentrated-around-800-amount-with-longer-tail-towards-1300." class="level4">
+<h4 class="anchored" data-anchor-id="observations-the-insurance-premium-are-concentrated-around-800-amount-with-longer-tail-towards-1300.">Observations: The insurance premium are concentrated around $800 amount, with longer “tail” towards $1,300.</h4>
 </section>
 </section>
 <section id="section-5.-step-5-initial-data-distribution-for-ins_premium-columns" class="level2">
 <h2 class="anchored" data-anchor-id="section-5.-step-5-initial-data-distribution-for-ins_premium-columns">Section 5. Step-5: Initial Data Distribution for ‘ins_premium’ Columns</h2>
 <section id="using-bins-as-input-for-df.value_counts-dividing-up-the-values-of-ins_premium-into-100s-and-count-how-many-in-each-range." class="level4">
 <h4 class="anchored" data-anchor-id="using-bins-as-input-for-df.value_counts-dividing-up-the-values-of-ins_premium-into-100s-and-count-how-many-in-each-range.">Using bins as input for df.value_counts(), dividing up the values of ‘ins_premium’ into 100s and count how many in each range.</h4>
-<div id="81a4d5ff" class="cell" data-execution_count="30">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>bins <span class="op">=</span> <span class="bu">range</span>(<span class="dv">500</span>, <span class="dv">1500</span>, <span class="dv">100</span>) <span class="co"># creates bins like [500, 599), [600-699), ..., [1300-1399)</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>counts_by_100s_value_counts <span class="op">=</span> df[<span class="st">'ins_premium'</span>].value_counts(bins<span class="op">=</span><span class="dv">10</span>).sort_index()</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(counts_by_100s_value_counts)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="81a4d5ff" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>(641.299, 707.916]       7
 (707.916, 773.872]       7
@@ -310,9 +233,8 @@ Name: count, dtype: int64</code></pre>
 <h2 class="anchored" data-anchor-id="section-6.-step-6-initial-data-transformation-and-feature-engineering">Section 6. Step-6: Initial Data Transformation and Feature Engineering</h2>
 <section id="re-naming-at-least-one-column" class="level4">
 <h4 class="anchored" data-anchor-id="re-naming-at-least-one-column">Re-naming at least one column</h4>
-<div id="7f3ff56a" class="cell" data-execution_count="31">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df.rename(columns<span class="op">=</span>{<span class="st">'total'</span>:<span class="st">'total_per_billion_miles'</span>}).head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="31">
+<div id="7f3ff56a" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display" data-execution_count="8">
 <div>
 
 
@@ -398,11 +320,8 @@ Name: count, dtype: int64</code></pre>
 </section>
 <section id="below-add-at-least-1-column-ins_profit-which-is-calculated-by-substracting-losses-from-premiums." class="level4">
 <h4 class="anchored" data-anchor-id="below-add-at-least-1-column-ins_profit-which-is-calculated-by-substracting-losses-from-premiums.">Below, add at least 1 column: ‘ins_profit’ – which is calculated by substracting losses from premiums.</h4>
-<div id="0903e6ed" class="cell" data-execution_count="32">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#adding a new column called 'ins_profit'</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'ins_profit'</span>] <span class="op">=</span> df[<span class="st">'ins_premium'</span>] <span class="op">-</span> df[<span class="st">'ins_losses'</span>]</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="32">
+<div id="0903e6ed" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="9">
 <div>
 
 
@@ -494,9 +413,8 @@ Name: count, dtype: int64</code></pre>
 </section>
 <section id="now-display-via-df.head" class="level4">
 <h4 class="anchored" data-anchor-id="now-display-via-df.head">Now, display via df.head()</h4>
-<div id="c7cea000" class="cell" data-execution_count="33">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="33">
+<div id="c7cea000" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="10">
 <div>
 
 
@@ -601,39 +519,11 @@ Name: count, dtype: int64</code></pre>
 <li>Wisconsin and Mississippi State: Had lowest “Not distracted crashes”, meaning, they had the highest “distracted driving crashes” – these states should focus more public awareness campaigns to fight against “distracted driving.”</li>
 </ul></li>
 </ol>
-<div id="310e8f87" class="cell" data-execution_count="34">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>sns.set_theme(style<span class="op">=</span><span class="st">"whitegrid"</span>)</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Make the PairGrid</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> sns.PairGrid(df.sort_values(<span class="st">"total"</span>, ascending<span class="op">=</span><span class="va">False</span>),</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>                 x_vars<span class="op">=</span>df.columns[:<span class="op">-</span><span class="dv">3</span>], y_vars<span class="op">=</span>[<span class="st">"abbrev"</span>],</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>                 height<span class="op">=</span><span class="dv">10</span>, aspect<span class="op">=</span><span class="fl">.25</span>)</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw a dot plot using the stripplot function</span></span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>g.<span class="bu">map</span>(sns.stripplot, size<span class="op">=</span><span class="dv">10</span>, orient<span class="op">=</span><span class="st">"h"</span>, jitter<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>      palette<span class="op">=</span><span class="st">"flare_r"</span>, linewidth<span class="op">=</span><span class="dv">1</span>, edgecolor<span class="op">=</span><span class="st">"w"</span>)</span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the same x axis limits on all columns and add better labels</span></span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>g.<span class="bu">set</span>(xlim<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">25</span>), xlabel<span class="op">=</span><span class="st">"Crashes"</span>, ylabel<span class="op">=</span><span class="st">""</span>)</span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Use semantically meaningful titles for the columns</span></span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>titles <span class="op">=</span> [<span class="st">"Total crashes"</span>, <span class="st">"Speeding crashes"</span>, <span class="st">"Alcohol crashes"</span>,</span>
-<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Not distracted crashes"</span>, <span class="st">"No previous crashes"</span>]</span>
-<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax, title <span class="kw">in</span> <span class="bu">zip</span>(g.axes.flat, titles):</span>
-<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set a different title for each axes</span></span>
-<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>    ax.<span class="bu">set</span>(title<span class="op">=</span>title)</span>
-<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Make the grid horizontal instead of vertical</span></span>
-<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>    ax.xaxis.grid(<span class="va">False</span>)</span>
-<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>    ax.yaxis.grid(<span class="va">True</span>)</span>
-<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>sns.despine(left<span class="op">=</span><span class="va">True</span>, bottom<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="310e8f87" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="tran_eda_report_files/figure-html/cell-12-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="tran_eda_report_version_2_files/figure-html/cell-12-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -652,24 +542,11 @@ Name: count, dtype: int64</code></pre>
 <li>Surprisingly, the states with lowest number of crashes and alcohol related creashes were: Washington state, Minnesota state, Massachusetts. Why? These are all geographically large states bordering Canada. Possibly some (positive) influence from our northern neighbor, perhaps?</li>
 </ul></li>
 </ol>
-<div id="91cf1dc9" class="cell" data-execution_count="35">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>sns.set_context(<span class="st">'paper'</span>)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>df.sort_values(<span class="st">'total'</span>, ascending <span class="op">=</span> <span class="va">False</span>)</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>f, ax <span class="op">=</span> plt.subplots(figsize <span class="op">=</span> (<span class="dv">6</span>,<span class="dv">15</span>))</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>sns.set_color_codes(<span class="st">'pastel'</span>)</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>sns.barplot(x <span class="op">=</span> <span class="st">'total'</span>, y <span class="op">=</span> <span class="st">'abbrev'</span>, data <span class="op">=</span> df,</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>            label <span class="op">=</span> <span class="st">'Total'</span>, color <span class="op">=</span> <span class="st">'b'</span>, edgecolor <span class="op">=</span> <span class="st">'w'</span>)</span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>sns.set_color_codes(<span class="st">'muted'</span>)</span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>sns.barplot(x <span class="op">=</span> <span class="st">'alcohol'</span>, y <span class="op">=</span> <span class="st">'abbrev'</span>, data <span class="op">=</span> df,</span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>            label <span class="op">=</span> <span class="st">'Alcohol-involved'</span>, color <span class="op">=</span> <span class="st">'b'</span>, edgecolor <span class="op">=</span> <span class="st">'w'</span>)</span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>ax.legend(ncol <span class="op">=</span> <span class="dv">2</span>, loc <span class="op">=</span> <span class="st">'lower right'</span>)</span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>sns.despine(left <span class="op">=</span> <span class="va">True</span>, bottom <span class="op">=</span> <span class="va">True</span>)</span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="91cf1dc9" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="tran_eda_report_files/figure-html/cell-13-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="tran_eda_report_version_2_files/figure-html/cell-13-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -683,27 +560,41 @@ Name: count, dtype: int64</code></pre>
 <li>Chart: See below.</li>
 <li>Story: Similar to 2 previous graphs in section 7-1 and 7-2, 3 states with highest total crashes (per billion miles driven) were: South Carolina, North Dakota and West Virginia. Federal fundings promoting car crashes prevention should be devoted to these 3 states will result in biggest impact in crashes reduction.</li>
 </ol>
-<div id="cc49a3a3" class="cell" data-execution_count="36">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>sns.barplot(x<span class="op">=</span><span class="st">"abbrev"</span>, y<span class="op">=</span><span class="st">"total"</span>, data<span class="op">=</span>df.sort_values(<span class="st">"total"</span>, ascending<span class="op">=</span><span class="va">False</span>))</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Total Car Crashes by State"</span>)</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"State Abbreviation"</span>)</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Total Crashes (per billion miles)"</span>)</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cc49a3a3" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="tran_eda_report_files/figure-html/cell-14-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="tran_eda_report_version_2_files/figure-html/cell-14-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
 </section>
-<section id="section-8.-step-4-initial-storytelling-and-presentation." class="level2">
-<h2 class="anchored" data-anchor-id="section-8.-step-4-initial-storytelling-and-presentation.">Section 8. Step-4: Initial Storytelling and Presentation.</h2>
-<section id="i-researched-various-options-on-how-to-present-my-stories-in-ipynb-notebook.-google-suggested-quarto.-after-watching-some-youtube-vidoes-about-quarto-i-decided-to-utilize-it." class="level4">
-<h4 class="anchored" data-anchor-id="i-researched-various-options-on-how-to-present-my-stories-in-ipynb-notebook.-google-suggested-quarto.-after-watching-some-youtube-vidoes-about-quarto-i-decided-to-utilize-it.">I researched various options on how to present my stories in ipynb notebook. Google suggested Quarto. After watching some youtube vidoes about Quarto, I decided to utilize it.</h4>
+<section id="section-8.-initial-storytelling-and-presentation." class="level2">
+<h2 class="anchored" data-anchor-id="section-8.-initial-storytelling-and-presentation.">Section 8. Initial Storytelling and Presentation.</h2>
+<section id="i-researched-various-options-on-how-to-present-my-stories-in-ipynb-notebook.-google-suggested-quarto.-after-watching-some-youtube-vidoes-about-quarto-i-decided-to-utilize-it.-note-that-the-story-telling-and-presentation-are-sprinkled-throughout-as-observations-in-markdown-format." class="level4">
+<h4 class="anchored" data-anchor-id="i-researched-various-options-on-how-to-present-my-stories-in-ipynb-notebook.-google-suggested-quarto.-after-watching-some-youtube-vidoes-about-quarto-i-decided-to-utilize-it.-note-that-the-story-telling-and-presentation-are-sprinkled-throughout-as-observations-in-markdown-format.">I researched various options on how to present my stories in ipynb notebook. Google suggested Quarto. After watching some youtube vidoes about Quarto, I decided to utilize it. Note that the story-telling and presentation are sprinkled throughout as Observations (in Markdown format).</h4>
+</section>
+<section id="instructions-on-how-to-use-quarto" class="level4">
+<h4 class="anchored" data-anchor-id="instructions-on-how-to-use-quarto">Instructions on how to use quarto:</h4>
+<ul>
+<li>Follow instructions on https://quarto.org to install quarto.</li>
+<li>For VS Code, install Quarto extension by searching (and install) “Quarto” published by “Quarto”</li>
+<li>On Macbook terminal windows, issue command `quarto render tran_eda_report_version_2.ipynb’ – resulted in a tran_eda_report_version_2.html file created.</li>
+</ul>
+</section>
+</section>
+<section id="conclusion-final-conclusions-of-this-project" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-final-conclusions-of-this-project">CONCLUSION Final Conclusions of this project</h2>
+<section id="as-described-in-section-3-based-on-descriptive-statistics-if-i-open-an-insurance-company-i-would-open-at-a-state-where-the-profit-is-maximized-by-having-the-largest-difference-between-insurance-premiums-and-insurance-losses" class="level4">
+<h4 class="anchored" data-anchor-id="as-described-in-section-3-based-on-descriptive-statistics-if-i-open-an-insurance-company-i-would-open-at-a-state-where-the-profit-is-maximized-by-having-the-largest-difference-between-insurance-premiums-and-insurance-losses">As described in section 3, based on Descriptive Statistics, if I open an insurance company, I would open at a state where the profit is maximized by having the largest difference between Insurance Premiums and Insurance Losses</h4>
+</section>
+<section id="section-04-and-05-showed-that-the-insurance-premiums-are-clustered-around-800-with-tail-end-values-up-to-1300.-so-there-are-potential-to-charge-more-on-insurance-premiums-in-those-states." class="level4">
+<h4 class="anchored" data-anchor-id="section-04-and-05-showed-that-the-insurance-premiums-are-clustered-around-800-with-tail-end-values-up-to-1300.-so-there-are-potential-to-charge-more-on-insurance-premiums-in-those-states.">Section 04 and 05 showed that the Insurance Premiums are clustered around $800, with tail-end values up to $1,300. So, there are potential to charge more on Insurance Premiums in those states.</h4>
+</section>
+<section id="the-3-graphs-in-section-07-showed-the-statistical-data-of-crashes-and-various-related-crashes-related-info-among-all-50-states-these-are-valuable-data-that-i-can-present-to-executive-managements-to-decide-where-to-open-insurance-company-branch-offices." class="level4">
+<h4 class="anchored" data-anchor-id="the-3-graphs-in-section-07-showed-the-statistical-data-of-crashes-and-various-related-crashes-related-info-among-all-50-states-these-are-valuable-data-that-i-can-present-to-executive-managements-to-decide-where-to-open-insurance-company-branch-offices.">The 3 graphs in section 07 showed the statistical data of crashes and various related crashes-related info among all 50 states: these are valuable data that I can present to Executive managements to decide where to open Insurance company branch offices.</h4>
 </section>
 </section>
 

@@ -19,3 +19,14 @@ GitHub, Git, Jupyter, pandas, Seaborn and other popular data analytics tools.
    
 ## Data Sources.
 1. For this project, I've chosen Seaborn's carcrashes. There are lots of car-crashes. It intriques me and I would like to dig further into the data: which preventable crashes can be prevented. Further details can be found at: https://github.com/mwaskom/seaborn-data/blob/master/README.md and https://www.kaggle.com/datasets/fivethirtyeight/fivethirtyeight-bad-drivers-dataset 
+   
+## Step 8 -- Report Presentation.
+#### Instructions on how to use quarto:
+* Follow instructions on https://quarto.org to install quarto. 
+* For VS Code, install Quarto extension by searching (and install) "Quarto" published by "Quarto"
+* On Macbook terminal windows, issue command `quarto render tran_eda_report_version_2.ipynb' -- resulted in a tran_eda_report_version_2.html file created.
+  
+#### tran_eda_report versions
+* tran_eda_report_version_1.ipynb : Is the inital tran_eda_report ipynb that corresponding to step-by-steps requirements for this project (except for step 8).
+* tran_eda_report_version_2.ipynb :  Is the version 1 of tran_eda_report, with some tweaking as suggested by quarto to make the HTML presentation more readable.
+* tran_eda_report_version_2.html : Is the HTML presentation produced by quarto that are readable and presentable.
