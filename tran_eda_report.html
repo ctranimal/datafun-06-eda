@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.33">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>CANH TRAN Notebook - Project 06.</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="tran_eda_report_files/libs/clipboard/clipboard.min.js"></script>
+<script src="tran_eda_report_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="tran_eda_report_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="tran_eda_report_files/libs/quarto-html/popper.min.js"></script>
+<script src="tran_eda_report_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="tran_eda_report_files/libs/quarto-html/anchor.min.js"></script>
+<link href="tran_eda_report_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="tran_eda_report_files/libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="tran_eda_report_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="tran_eda_report_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="tran_eda_report_files/libs/bootstrap/bootstrap-81267100e462c21b3d6c0d5bf76a3417.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">CANH TRAN Notebook - Project 06.</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<ul>
+<li><p>Author: <a href="https://github.com/ctranimal">Ken McTran</a></p></li>
+<li><p>Repository: https://github.com/ctranimal/datafun-06-eda</p></li>
+<li><p>Purpose: To practice with Markdown cells, Jupyter, pandas, Seaborn and other popular tools for data analytics. I utilized Quarto as a tool to convert Jupyter notebook into more readable/presentable products.</p></li>
+<li><p>Date: Most recently updated: 8/07/25.</p></li>
+</ul>
+<section id="section-0.-setting-up-import-external-packages" class="level2">
+<h2 class="anchored" data-anchor-id="section-0.-setting-up-import-external-packages">Section 0. Setting-Up: Import external packages</h2>
+<section id="the-purpose-of-this-section-is-to-import-external-packages-that-i-will-need-to-execute-python-code-subsequently" class="level4">
+<h4 class="anchored" data-anchor-id="the-purpose-of-this-section-is-to-import-external-packages-that-i-will-need-to-execute-python-code-subsequently">The purpose of this section is to import external packages that I will need to execute python code subsequently</h4>
+<div id="9231ea24" class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="section-1.-step-1-data-acquisition" class="level2">
+<h2 class="anchored" data-anchor-id="section-1.-step-1-data-acquisition">Section 1. Step-1: Data Acquisition</h2>
+<section id="load-the-car_crashes-dataset-into-pandas-dataframe.-for-this-project-we-use-pre-made-data-called-car_crashes-so-that-we-can-go-ahead-and-practice-with-pandas-dataframe-as-opposed-to-loading-data-from-the-internet-via-reading-excel-or-csv-or-json-data-etc" class="level4">
+<h4 class="anchored" data-anchor-id="load-the-car_crashes-dataset-into-pandas-dataframe.-for-this-project-we-use-pre-made-data-called-car_crashes-so-that-we-can-go-ahead-and-practice-with-pandas-dataframe-as-opposed-to-loading-data-from-the-internet-via-reading-excel-or-csv-or-json-data-etc">1. Load the car_crashes dataset into pandas DataFrame. For this project, we use pre-made data called car_crashes so that we can go ahead and practice with pandas DataFrame (as opposed to loading data from the internet via reading excel or csv or JSON data etc …)</h4>
+<div id="373bdd52" class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the dataset ino a pandas DataFrame</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> sns.load_dataset(<span class="st">"car_crashes"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Inspect first rows of the DataFrame</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   total  speeding  alcohol  not_distracted  no_previous  ins_premium  \
+0   18.8     7.332    5.640          18.048       15.040       784.55   
+1   18.1     7.421    4.525          16.290       17.014      1053.48   
+2   18.6     6.510    5.208          15.624       17.856       899.47   
+3   22.4     4.032    5.824          21.056       21.280       827.34   
+4   12.0     4.200    3.360          10.920       10.680       878.41   
+
+   ins_losses abbrev  
+0      145.08     AL  
+1      133.93     AK  
+2      110.35     AZ  
+3      142.39     AR  
+4      165.63     CA  </code></pre>
+</div>
+</div>
+</section>
+<section id="observations-the-table-had-50-rows-1-for-each-state.-each-row-has-info-for-crashes-total-crashes-per-billions-of-miles-driven-speeding-related-crashes-alcohol-related-crashes-number-of-crashes-with-no-previous-accidents-number-of-not-distracted-crashes-and-info-on-insurance-premiums-and-insurance-losses." class="level4">
+<h4 class="anchored" data-anchor-id="observations-the-table-had-50-rows-1-for-each-state.-each-row-has-info-for-crashes-total-crashes-per-billions-of-miles-driven-speeding-related-crashes-alcohol-related-crashes-number-of-crashes-with-no-previous-accidents-number-of-not-distracted-crashes-and-info-on-insurance-premiums-and-insurance-losses.">2. Observations: The table had 50 rows, 1 for each state. Each row has info for crashes: total crashes per billions of miles driven, speeding related crashes, alcohol related crashes, number of crashes with no previous accidents, number of not-distracted crashes and info on insurance premiums and insurance losses.</h4>
+</section>
+</section>
+<section id="section-2.-step-2-initial-data-inspection" class="level2">
+<h2 class="anchored" data-anchor-id="section-2.-step-2-initial-data-inspection">Section 2. Step-2: Initial Data Inspection</h2>
+<section id="display-the-first-10-rows-of-the-dataframe-display-the-data-types-of-each-column-using-df.head10-df.shape-and-df.dtypes" class="level4">
+<h4 class="anchored" data-anchor-id="display-the-first-10-rows-of-the-dataframe-display-the-data-types-of-each-column-using-df.head10-df.shape-and-df.dtypes">Display the first 10 rows of the DataFrame, display the data types of each column using df.head(10), df.shape and df.dtypes</h4>
+<div id="88a5369a" class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.head(<span class="dv">10</span>))</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.shape)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.dtypes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   total  speeding  alcohol  not_distracted  no_previous  ins_premium  \
+0   18.8     7.332    5.640          18.048       15.040       784.55   
+1   18.1     7.421    4.525          16.290       17.014      1053.48   
+2   18.6     6.510    5.208          15.624       17.856       899.47   
+3   22.4     4.032    5.824          21.056       21.280       827.34   
+4   12.0     4.200    3.360          10.920       10.680       878.41   
+5   13.6     5.032    3.808          10.744       12.920       835.50   
+6   10.8     4.968    3.888           9.396        8.856      1068.73   
+7   16.2     6.156    4.860          14.094       16.038      1137.87   
+8    5.9     2.006    1.593           5.900        5.900      1273.89   
+9   17.9     3.759    5.191          16.468       16.826      1160.13   
+
+   ins_losses abbrev  
+0      145.08     AL  
+1      133.93     AK  
+2      110.35     AZ  
+3      142.39     AR  
+4      165.63     CA  
+5      139.91     CO  
+6      167.02     CT  
+7      151.48     DE  
+8      136.05     DC  
+9      144.18     FL  
+(51, 8)
+total             float64
+speeding          float64
+alcohol           float64
+not_distracted    float64
+no_previous       float64
+ins_premium       float64
+ins_losses        float64
+abbrev             object
+dtype: object</code></pre>
+</div>
+</div>
+</section>
+<section id="observations-each-row-has-info-for-crashes-total-crashes-per-billions-of-miles-driven-speeding-related-crashes-alcohol-related-crashes-number-of-crashes-with-no-previous-accidents-number-of-not-distracted-crashes-and-info-on-insurance-premiums-and-insurance-losses." class="level4">
+<h4 class="anchored" data-anchor-id="observations-each-row-has-info-for-crashes-total-crashes-per-billions-of-miles-driven-speeding-related-crashes-alcohol-related-crashes-number-of-crashes-with-no-previous-accidents-number-of-not-distracted-crashes-and-info-on-insurance-premiums-and-insurance-losses.">Observations: Each row has info for crashes: total crashes per billions of miles driven, speeding related crashes, alcohol related crashes, number of crashes with no previous accidents, number of not-distracted crashes and info on insurance premiums and insurance losses.</h4>
+</section>
+</section>
+<section id="section-3.-step-3-initial-descriptive-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="section-3.-step-3-initial-descriptive-statistics">Section 3. Step-3: Initial Descriptive Statistics</h2>
+<section id="use-the-dataframe-describe-method-to-display-summary-statistics-for-each-column" class="level4">
+<h4 class="anchored" data-anchor-id="use-the-dataframe-describe-method-to-display-summary-statistics-for-each-column">Use the DataFrame describe() method to display summary statistics for each column</h4>
+<div id="af8090bd" class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           total   speeding    alcohol  not_distracted  no_previous  \
+count  51.000000  51.000000  51.000000       51.000000    51.000000   
+mean   15.790196   4.998196   4.886784       13.573176    14.004882   
+std     4.122002   2.017747   1.729133        4.508977     3.764672   
+min     5.900000   1.792000   1.593000        1.760000     5.900000   
+25%    12.750000   3.766500   3.894000       10.478000    11.348000   
+50%    15.600000   4.608000   4.554000       13.857000    13.775000   
+75%    18.500000   6.439000   5.604000       16.140000    16.755000   
+max    23.900000   9.450000  10.038000       23.661000    21.280000   
+
+       ins_premium  ins_losses  
+count    51.000000   51.000000  
+mean    886.957647  134.493137  
+std     178.296285   24.835922  
+min     641.960000   82.750000  
+25%     768.430000  114.645000  
+50%     858.970000  136.050000  
+75%    1007.945000  151.870000  
+max    1301.520000  194.780000  </code></pre>
+</div>
+</div>
+</section>
+<section id="observations" class="level4">
+<h4 class="anchored" data-anchor-id="observations">Observations:</h4>
+<ul>
+<li>The information displayed above had descriptive statistics for each of the columns: the mean, standard deviations, min/max, 25 percentile, 50 percentile, and 75 percentile.</li>
+<li>Look at standard deviation for insurance premium and insurance losses. The std for ins_losses is about 25 whereas std for ins_premium is 178. Thus, std for ins_premium is about 7 times larger than that for ins_losses.</li>
+<li>If I start an insurance company, I would open office at states where the std for ins_premium is the largest, because then I would make the most profit.</li>
+</ul>
+</section>
+</section>
+<section id="section-4.-step-4-initial-data-distribution-for-numerical-columns" class="level2">
+<h2 class="anchored" data-anchor-id="section-4.-step-4-initial-data-distribution-for-numerical-columns">Section 4. Step-4: Initial Data Distribution for Numerical Columns</h2>
+<section id="use-dfins_premium.hist-to-plot-a-histogram-for-ins_premium-column." class="level4">
+<h4 class="anchored" data-anchor-id="use-dfins_premium.hist-to-plot-a-histogram-for-ins_premium-column.">Use df[‘ins_premium’].hist() to plot a histogram for ‘ins_premium’ column.</h4>
+<div id="9c70c3f2" class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'ins_premium'</span>].hist()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="tran_eda_report_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="observations-the-insuraance-premium-are-concentrated-around-800-amount-with-longer-tail-towards-1300." class="level4">
+<h4 class="anchored" data-anchor-id="observations-the-insuraance-premium-are-concentrated-around-800-amount-with-longer-tail-towards-1300.">Observations: The insuraance premium are concentrated around $800 amount, with longer “tail” towards $1,300.</h4>
+</section>
+<section id="below-show-all-the-histograms-for-all-numerical-columns-using-df.hist" class="level4">
+<h4 class="anchored" data-anchor-id="below-show-all-the-histograms-for-all-numerical-columns-using-df.hist">Below, show all the histograms for all numerical columns, using df.hist()</h4>
+<div id="f5b302e4" class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df.hist()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="29">
+<pre><code>array([[&lt;Axes: title={'center': 'total'}&gt;,
+        &lt;Axes: title={'center': 'speeding'}&gt;,
+        &lt;Axes: title={'center': 'alcohol'}&gt;],
+       [&lt;Axes: title={'center': 'not_distracted'}&gt;,
+        &lt;Axes: title={'center': 'no_previous'}&gt;,
+        &lt;Axes: title={'center': 'ins_premium'}&gt;],
+       [&lt;Axes: title={'center': 'ins_losses'}&gt;, &lt;Axes: &gt;, &lt;Axes: &gt;]],
+      dtype=object)</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="tran_eda_report_files/figure-html/cell-7-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="section-5.-step-5-initial-data-distribution-for-ins_premium-columns" class="level2">
+<h2 class="anchored" data-anchor-id="section-5.-step-5-initial-data-distribution-for-ins_premium-columns">Section 5. Step-5: Initial Data Distribution for ‘ins_premium’ Columns</h2>
+<section id="using-bins-as-input-for-df.value_counts-dividing-up-the-values-of-ins_premium-into-100s-and-count-how-many-in-each-range." class="level4">
+<h4 class="anchored" data-anchor-id="using-bins-as-input-for-df.value_counts-dividing-up-the-values-of-ins_premium-into-100s-and-count-how-many-in-each-range.">Using bins as input for df.value_counts(), dividing up the values of ‘ins_premium’ into 100s and count how many in each range.</h4>
+<div id="81a4d5ff" class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>bins <span class="op">=</span> <span class="bu">range</span>(<span class="dv">500</span>, <span class="dv">1500</span>, <span class="dv">100</span>) <span class="co"># creates bins like [500, 599), [600-699), ..., [1300-1399)</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>counts_by_100s_value_counts <span class="op">=</span> df[<span class="st">'ins_premium'</span>].value_counts(bins<span class="op">=</span><span class="dv">10</span>).sort_index()</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(counts_by_100s_value_counts)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(641.299, 707.916]       7
+(707.916, 773.872]       7
+(773.872, 839.828]      11
+(839.828, 905.784]       9
+(905.784, 971.74]        2
+(971.74, 1037.696]       4
+(1037.696, 1103.652]     3
+(1103.652, 1169.608]     4
+(1169.608, 1235.564]     1
+(1235.564, 1301.52]      3
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+</section>
+<section id="observations-consistent-with-section-4-above-the-insurance-premiums-are-clustered-aroudn-800-as-shown-above-whereas-the-data-were-spread-out-to-the-tail-all-the-way-to-1300" class="level4">
+<h4 class="anchored" data-anchor-id="observations-consistent-with-section-4-above-the-insurance-premiums-are-clustered-aroudn-800-as-shown-above-whereas-the-data-were-spread-out-to-the-tail-all-the-way-to-1300">Observations: Consistent with section 4 above, the insurance premiums are clustered aroudn $800, as shown above, whereas the data were spread out to the “tail” all the way to $1,300</h4>
+</section>
+</section>
+<section id="section-6.-step-6-initial-data-transformation-and-feature-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="section-6.-step-6-initial-data-transformation-and-feature-engineering">Section 6. Step-6: Initial Data Transformation and Feature Engineering</h2>
+<section id="re-naming-at-least-one-column" class="level4">
+<h4 class="anchored" data-anchor-id="re-naming-at-least-one-column">Re-naming at least one column</h4>
+<div id="7f3ff56a" class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df.rename(columns<span class="op">=</span>{<span class="st">'total'</span>:<span class="st">'total_per_billion_miles'</span>}).head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="31">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">total_per_billion_miles</th>
+<th data-quarto-table-cell-role="th">speeding</th>
+<th data-quarto-table-cell-role="th">alcohol</th>
+<th data-quarto-table-cell-role="th">not_distracted</th>
+<th data-quarto-table-cell-role="th">no_previous</th>
+<th data-quarto-table-cell-role="th">ins_premium</th>
+<th data-quarto-table-cell-role="th">ins_losses</th>
+<th data-quarto-table-cell-role="th">abbrev</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>18.8</td>
+<td>7.332</td>
+<td>5.640</td>
+<td>18.048</td>
+<td>15.040</td>
+<td>784.55</td>
+<td>145.08</td>
+<td>AL</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>18.1</td>
+<td>7.421</td>
+<td>4.525</td>
+<td>16.290</td>
+<td>17.014</td>
+<td>1053.48</td>
+<td>133.93</td>
+<td>AK</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>18.6</td>
+<td>6.510</td>
+<td>5.208</td>
+<td>15.624</td>
+<td>17.856</td>
+<td>899.47</td>
+<td>110.35</td>
+<td>AZ</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>22.4</td>
+<td>4.032</td>
+<td>5.824</td>
+<td>21.056</td>
+<td>21.280</td>
+<td>827.34</td>
+<td>142.39</td>
+<td>AR</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>12.0</td>
+<td>4.200</td>
+<td>3.360</td>
+<td>10.920</td>
+<td>10.680</td>
+<td>878.41</td>
+<td>165.63</td>
+<td>CA</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="observations-successfully-changed-the-total-column-heading-to-total-per-billion-miles-to-clearly-indicating-the-data." class="level4">
+<h4 class="anchored" data-anchor-id="observations-successfully-changed-the-total-column-heading-to-total-per-billion-miles-to-clearly-indicating-the-data.">Observations: Successfully changed the “total” column heading to “total per billion miles” to clearly indicating the data.</h4>
+</section>
+<section id="below-add-at-least-1-column-ins_profit-which-is-calculated-by-substracting-losses-from-premiums." class="level4">
+<h4 class="anchored" data-anchor-id="below-add-at-least-1-column-ins_profit-which-is-calculated-by-substracting-losses-from-premiums.">Below, add at least 1 column: ‘ins_profit’ – which is calculated by substracting losses from premiums.</h4>
+<div id="0903e6ed" class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#adding a new column called 'ins_profit'</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'ins_profit'</span>] <span class="op">=</span> df[<span class="st">'ins_premium'</span>] <span class="op">-</span> df[<span class="st">'ins_losses'</span>]</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="32">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">total</th>
+<th data-quarto-table-cell-role="th">speeding</th>
+<th data-quarto-table-cell-role="th">alcohol</th>
+<th data-quarto-table-cell-role="th">not_distracted</th>
+<th data-quarto-table-cell-role="th">no_previous</th>
+<th data-quarto-table-cell-role="th">ins_premium</th>
+<th data-quarto-table-cell-role="th">ins_losses</th>
+<th data-quarto-table-cell-role="th">abbrev</th>
+<th data-quarto-table-cell-role="th">ins_profit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>18.8</td>
+<td>7.332</td>
+<td>5.640</td>
+<td>18.048</td>
+<td>15.040</td>
+<td>784.55</td>
+<td>145.08</td>
+<td>AL</td>
+<td>639.47</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>18.1</td>
+<td>7.421</td>
+<td>4.525</td>
+<td>16.290</td>
+<td>17.014</td>
+<td>1053.48</td>
+<td>133.93</td>
+<td>AK</td>
+<td>919.55</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>18.6</td>
+<td>6.510</td>
+<td>5.208</td>
+<td>15.624</td>
+<td>17.856</td>
+<td>899.47</td>
+<td>110.35</td>
+<td>AZ</td>
+<td>789.12</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>22.4</td>
+<td>4.032</td>
+<td>5.824</td>
+<td>21.056</td>
+<td>21.280</td>
+<td>827.34</td>
+<td>142.39</td>
+<td>AR</td>
+<td>684.95</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>12.0</td>
+<td>4.200</td>
+<td>3.360</td>
+<td>10.920</td>
+<td>10.680</td>
+<td>878.41</td>
+<td>165.63</td>
+<td>CA</td>
+<td>712.78</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="observations-successfully-added-a-column-with-heading-ins_profit-and-calculated-by-substracting-ins_losses-from-ins_premium" class="level4">
+<h4 class="anchored" data-anchor-id="observations-successfully-added-a-column-with-heading-ins_profit-and-calculated-by-substracting-ins_losses-from-ins_premium">Observations: Successfully added a column with heading “ins_profit” and calculated by substracting ins_losses from ins_premium</h4>
+</section>
+<section id="now-display-via-df.head" class="level4">
+<h4 class="anchored" data-anchor-id="now-display-via-df.head">Now, display via df.head()</h4>
+<div id="c7cea000" class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="33">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">total</th>
+<th data-quarto-table-cell-role="th">speeding</th>
+<th data-quarto-table-cell-role="th">alcohol</th>
+<th data-quarto-table-cell-role="th">not_distracted</th>
+<th data-quarto-table-cell-role="th">no_previous</th>
+<th data-quarto-table-cell-role="th">ins_premium</th>
+<th data-quarto-table-cell-role="th">ins_losses</th>
+<th data-quarto-table-cell-role="th">abbrev</th>
+<th data-quarto-table-cell-role="th">ins_profit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>18.8</td>
+<td>7.332</td>
+<td>5.640</td>
+<td>18.048</td>
+<td>15.040</td>
+<td>784.55</td>
+<td>145.08</td>
+<td>AL</td>
+<td>639.47</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>18.1</td>
+<td>7.421</td>
+<td>4.525</td>
+<td>16.290</td>
+<td>17.014</td>
+<td>1053.48</td>
+<td>133.93</td>
+<td>AK</td>
+<td>919.55</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>18.6</td>
+<td>6.510</td>
+<td>5.208</td>
+<td>15.624</td>
+<td>17.856</td>
+<td>899.47</td>
+<td>110.35</td>
+<td>AZ</td>
+<td>789.12</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>22.4</td>
+<td>4.032</td>
+<td>5.824</td>
+<td>21.056</td>
+<td>21.280</td>
+<td>827.34</td>
+<td>142.39</td>
+<td>AR</td>
+<td>684.95</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>12.0</td>
+<td>4.200</td>
+<td>3.360</td>
+<td>10.920</td>
+<td>10.680</td>
+<td>878.41</td>
+<td>165.63</td>
+<td>CA</td>
+<td>712.78</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="section-7.-step-7-initial-visualization" class="level2">
+<h2 class="anchored" data-anchor-id="section-7.-step-7-initial-visualization">Section 7. Step-7: Initial Visualization</h2>
+<section id="in-this-section-ill-present-3-stories-with-goalschart-types-that-backup-the-story-lines-and-observations." class="level4">
+<h4 class="anchored" data-anchor-id="in-this-section-ill-present-3-stories-with-goalschart-types-that-backup-the-story-lines-and-observations.">In this section, I’ll present 3 stories with goals/chart-types that backup the story-lines and observations.</h4>
+</section>
+<section id="section-7-1" class="level4">
+<h4 class="anchored" data-anchor-id="section-7-1">Section 7-1:</h4>
+<ol type="1">
+<li>Goal: Displaying 5 categories of info relating to crashes against the state abbreviation (on y-axis)</li>
+<li>Chart-Type: PairGrid charts.</li>
+<li>Chart: See chart below</li>
+<li>Story: As displayed in charts below, 5 categories of crashes info: total crashes, speeding crashes, alcohol crashes, not distracted crashes, no previous crashes were mapped against the 50 state abbreviations. Some outlier datapoints, visible on the chart below, told the stories:
+<ul>
+<li>Utah: had lowest alcohol crashes. It may have something to do with Utah being mostly a “dry state” regarding alcohol.</li>
+<li>Wisconsin and Mississippi State: Had lowest “Not distracted crashes”, meaning, they had the highest “distracted driving crashes” – these states should focus more public awareness campaigns to fight against “distracted driving.”</li>
+</ul></li>
+</ol>
+<div id="310e8f87" class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>sns.set_theme(style<span class="op">=</span><span class="st">"whitegrid"</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Make the PairGrid</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> sns.PairGrid(df.sort_values(<span class="st">"total"</span>, ascending<span class="op">=</span><span class="va">False</span>),</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>                 x_vars<span class="op">=</span>df.columns[:<span class="op">-</span><span class="dv">3</span>], y_vars<span class="op">=</span>[<span class="st">"abbrev"</span>],</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>                 height<span class="op">=</span><span class="dv">10</span>, aspect<span class="op">=</span><span class="fl">.25</span>)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw a dot plot using the stripplot function</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>g.<span class="bu">map</span>(sns.stripplot, size<span class="op">=</span><span class="dv">10</span>, orient<span class="op">=</span><span class="st">"h"</span>, jitter<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>      palette<span class="op">=</span><span class="st">"flare_r"</span>, linewidth<span class="op">=</span><span class="dv">1</span>, edgecolor<span class="op">=</span><span class="st">"w"</span>)</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the same x axis limits on all columns and add better labels</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>g.<span class="bu">set</span>(xlim<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">25</span>), xlabel<span class="op">=</span><span class="st">"Crashes"</span>, ylabel<span class="op">=</span><span class="st">""</span>)</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Use semantically meaningful titles for the columns</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>titles <span class="op">=</span> [<span class="st">"Total crashes"</span>, <span class="st">"Speeding crashes"</span>, <span class="st">"Alcohol crashes"</span>,</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Not distracted crashes"</span>, <span class="st">"No previous crashes"</span>]</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax, title <span class="kw">in</span> <span class="bu">zip</span>(g.axes.flat, titles):</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set a different title for each axes</span></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>    ax.<span class="bu">set</span>(title<span class="op">=</span>title)</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Make the grid horizontal instead of vertical</span></span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>    ax.xaxis.grid(<span class="va">False</span>)</span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>    ax.yaxis.grid(<span class="va">True</span>)</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>sns.despine(left<span class="op">=</span><span class="va">True</span>, bottom<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="tran_eda_report_files/figure-html/cell-12-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="section-7-2" class="level4">
+<h4 class="anchored" data-anchor-id="section-7-2">Section 7-2:</h4>
+<ol type="1">
+<li>Goal: Display alcohol related crashes against total crashes for each state</li>
+<li>Chart-Type: Barplot charts</li>
+<li>Chart: See below</li>
+<li>Story: As displayed in the Barplot charts below: With state abbreviations on the y-axis, and each horizontal bar (with dark-blue portion representing alcohol related crashes) displaying total-crashes. Observations:
+<ul>
+<li>Utah: Had the lowest alcohol-related crashes – may have something to do with it being a “dry-state” regarding alcohol.</li>
+<li>The 8 states with the highest number of crashes (per billion miles driven) and highest alcohol related crashes: South Carolina, North Dakota, West Virginia, Arkansas, Kentucky, Montana, Lousiana and Oklohama</li>
+<li>Surprisingly, the states with lowest number of crashes and alcohol related creashes were: Washington state, Minnesota state, Massachusetts. Why? These are all geographically large states bordering Canada. Possibly some (positive) influence from our northern neighbor, perhaps?</li>
+</ul></li>
+</ol>
+<div id="91cf1dc9" class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>sns.set_context(<span class="st">'paper'</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>df.sort_values(<span class="st">'total'</span>, ascending <span class="op">=</span> <span class="va">False</span>)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>f, ax <span class="op">=</span> plt.subplots(figsize <span class="op">=</span> (<span class="dv">6</span>,<span class="dv">15</span>))</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>sns.set_color_codes(<span class="st">'pastel'</span>)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>sns.barplot(x <span class="op">=</span> <span class="st">'total'</span>, y <span class="op">=</span> <span class="st">'abbrev'</span>, data <span class="op">=</span> df,</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>            label <span class="op">=</span> <span class="st">'Total'</span>, color <span class="op">=</span> <span class="st">'b'</span>, edgecolor <span class="op">=</span> <span class="st">'w'</span>)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>sns.set_color_codes(<span class="st">'muted'</span>)</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>sns.barplot(x <span class="op">=</span> <span class="st">'alcohol'</span>, y <span class="op">=</span> <span class="st">'abbrev'</span>, data <span class="op">=</span> df,</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>            label <span class="op">=</span> <span class="st">'Alcohol-involved'</span>, color <span class="op">=</span> <span class="st">'b'</span>, edgecolor <span class="op">=</span> <span class="st">'w'</span>)</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>ax.legend(ncol <span class="op">=</span> <span class="dv">2</span>, loc <span class="op">=</span> <span class="st">'lower right'</span>)</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>sns.despine(left <span class="op">=</span> <span class="va">True</span>, bottom <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="tran_eda_report_files/figure-html/cell-13-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="section-7-3" class="level4">
+<h4 class="anchored" data-anchor-id="section-7-3">Section 7-3:</h4>
+<ol type="1">
+<li>Goal: Comparing total crashes between all 50 states.</li>
+<li>Chart-Type: Barplot charts.</li>
+<li>Chart: See below.</li>
+<li>Story: Similar to 2 previous graphs in section 7-1 and 7-2, 3 states with highest total crashes (per billion miles driven) were: South Carolina, North Dakota and West Virginia. Federal fundings promoting car crashes prevention should be devoted to these 3 states will result in biggest impact in crashes reduction.</li>
+</ol>
+<div id="cc49a3a3" class="cell" data-execution_count="36">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>sns.barplot(x<span class="op">=</span><span class="st">"abbrev"</span>, y<span class="op">=</span><span class="st">"total"</span>, data<span class="op">=</span>df.sort_values(<span class="st">"total"</span>, ascending<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Total Car Crashes by State"</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"State Abbreviation"</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Total Crashes (per billion miles)"</span>)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="tran_eda_report_files/figure-html/cell-14-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="section-8.-step-4-initial-storytelling-and-presentation." class="level2">
+<h2 class="anchored" data-anchor-id="section-8.-step-4-initial-storytelling-and-presentation.">Section 8. Step-4: Initial Storytelling and Presentation.</h2>
+<section id="i-researched-various-options-on-how-to-present-my-stories-in-ipynb-notebook.-google-suggested-quarto.-after-watching-some-youtube-vidoes-about-quarto-i-decided-to-utilize-it." class="level4">
+<h4 class="anchored" data-anchor-id="i-researched-various-options-on-how-to-present-my-stories-in-ipynb-notebook.-google-suggested-quarto.-after-watching-some-youtube-vidoes-about-quarto-i-decided-to-utilize-it.">I researched various options on how to present my stories in ipynb notebook. Google suggested Quarto. After watching some youtube vidoes about Quarto, I decided to utilize it.</h4>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
